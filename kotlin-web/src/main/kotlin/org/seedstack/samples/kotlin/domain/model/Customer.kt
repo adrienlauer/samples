@@ -1,8 +1,6 @@
 package org.seedstack.samples.kotlin.domain.model
 
-import org.kametic.specifications.Specification
 import org.seedstack.business.domain.*
-import org.seedstack.business.specification.dsl.AggregateSelector
 import org.seedstack.business.util.inmemory.BaseInMemoryRepository
 import java.util.stream.Stream
 
@@ -26,6 +24,6 @@ interface CustomerRepository : Repository<Customer, CustomerId> {
 
 class InMemoryCustomerRepository : BaseInMemoryRepository<Customer, CustomerId>(), CustomerRepository {
     override fun searchByName(term: String): Stream<Customer> {
-        
+
     }
 }
