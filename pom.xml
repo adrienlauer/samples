@@ -94,6 +94,7 @@
         <module>full-apps/catalog-microservice</module>
         <module>full-apps/ddd</module>
         <module>full-apps/store-webapp</module>
+        <module>kotlin/webapp</module>
     </modules>
 
     <dependencyManagement>
