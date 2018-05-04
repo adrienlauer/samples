@@ -1,3 +1,10 @@
+/**
+ * Copyright © 2013-2018, The SeedStack authors <http://seedstack.org>
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 package org.seedstack.samples.kotlin.domain.model
 
 import org.seedstack.business.domain.*
@@ -12,7 +19,7 @@ interface CustomerFactory : Factory<Customer> {
     fun createCustomer(firstName: String, lastName: String): Customer
 }
 
-class DefaultCustomerFactory : BaseFactory<Customer>(), CustomerFactory {
+open class DefaultCustomerFactory : BaseFactory<Customer>(), CustomerFactory {
     override fun createCustomer(firstName: String, lastName: String): Customer {
         return Customer(CustomerId(firstName, lastName))
     }

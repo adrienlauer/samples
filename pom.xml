@@ -12,6 +12,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.seedstack.poms</groupId>
+        <artifactId>parent-internal</artifactId>
+        <version>3.2.1</version>
+    </parent>
     <groupId>org.seedstack.samples</groupId>
     <artifactId>samples</artifactId>
     <version>18.4</version>
@@ -26,6 +31,7 @@
 
         <seedstack.version>${project.version}-SNAPSHOT</seedstack.version>
         <seedstack-maven-plugin.version>2.7.0</seedstack-maven-plugin.version>
+        <kotlin.version>1.2.31</kotlin.version>
 
         <spring.version>4.2.5.RELEASE</spring.version>
         <spring-batch.version>3.0.5.RELEASE</spring-batch.version>
