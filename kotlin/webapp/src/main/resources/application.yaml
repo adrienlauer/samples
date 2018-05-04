@@ -1,0 +1,18 @@
+logging:
+  level: INFO
+
+application:
+  id: kotlin-web
+  basePackages: [ org.seedstack.samples ]
+
+
+security:
+  realms: ConfigurationRealm
+  users:
+    demo: demo
+  web:
+    urls:
+       -
+         pattern: /api/**
+         filters: authcBasic
+
