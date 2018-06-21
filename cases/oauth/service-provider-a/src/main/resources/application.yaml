@@ -1,0 +1,20 @@
+application:
+  id: oauth-service-provider-a
+
+web:
+  server: 8081
+  cors: true
+
+security:
+  realms: OAuthRealm
+  web:
+    urls:
+      -
+        pattern: /**
+        filters: oauth
+  oauth:
+    redirect: http://localhost:8080/callback
+    discoveryDocument: https://accounts.google.com/.well-known/openid-configuration
+    scopes: email
+    clientId: ${env.clientId}
+    clientSecret: ${env.clientSecret}

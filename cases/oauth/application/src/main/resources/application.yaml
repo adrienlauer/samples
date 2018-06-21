@@ -1,0 +1,19 @@
+application:
+  id: oauth-service-provider-b
+
+security:
+  realms: OAuthRealm
+  web:
+    urls:
+      -
+        pattern: /callback
+        filters: oauthCallback
+      -
+        pattern: /profile.html
+        filters: oauth
+  oauth:
+    redirect: http://localhost:8080/callback
+    discoveryDocument: https://accounts.google.com/.well-known/openid-configuration
+    scopes: email
+    clientId: ${env.clientId}
+    clientSecret: ${env.clientSecret}
